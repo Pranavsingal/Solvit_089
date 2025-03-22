@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Rating Website</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <img src="https://vitbhopal.ac.in/wp-content/uploads/2022/02/VIT-Bhopal-Logo.png" alt="Website Logo" height="100" width="200">
+  <header>
+    <h1>Food Rating Website</h1>
+    <p>Rate and review your favorite hostel meals!</p>
+  </header>
+  
+  <main>
+    <!-- Menu Section -->
+    <section id="menu">
+      <h2>Today's Menu</h2>
+      <div class="menu-items">
+        <!-- Menu items will be dynamically added here -->
+      </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section id="feedback-form" class="hidden">
+      <h2>Leave Feedback</h2>
+      <form id="feedbackForm">
+        <label for="rating">Rating (1-5):</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+        
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+        
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+    <!-- Feedback Display -->
+    <section id="feedback-display">
+      <h2>Recent Feedback</h2>
+      <div class="feedback-items">
+        <!-- Feedback items will be dynamically added here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; VIT Hostel's Food Rating System</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
